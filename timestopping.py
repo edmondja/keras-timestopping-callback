@@ -1,6 +1,3 @@
-import time, datetime
-import numpy as np
-from keras.callbacks import EarlyStopping
 
 class TimeStopping(EarlyStopping):
     """Stop training when a specified amount of time has passed.
@@ -8,8 +5,11 @@ class TimeStopping(EarlyStopping):
         seconds: maximum amount of time before stopping.
             Defaults to 86400 (1 day).
         verbose: verbosity mode. Defaults to 0.
-        
-        + EarlyStopping parameters
+        restore_best_weights: whether to restore model weights from
+            the epoch with the best value of the monitored quantity.
+            If False, the model weights obtained at the last step of
+            training are used.
+        monitor: quantity to be monitored.
     """
 
     def __init__(self, seconds=86400, verbose=0, restore_best_weights=True, 
