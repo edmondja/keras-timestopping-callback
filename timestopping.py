@@ -1,3 +1,6 @@
+import time, datetime
+import numpy as np
+from keras.callbacks import EarlyStopping
 
 class TimeStopping(EarlyStopping):
     """Stop training when a specified amount of time has passed.
