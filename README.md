@@ -1,4 +1,5 @@
 TimeStopping callback for Keras.
+
 It is similar to Early Stopping but it is based on the time spent rather than on the number of epochs.
 
 This implementation is compatible with restore_best_weights and with the monitor parameter you can find in EarlyStopping. 
